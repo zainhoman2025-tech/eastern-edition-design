@@ -99,41 +99,70 @@
         </section>
 
         <!-- MASTER FOOTER -->
-        <footer class="bg-white border-t border-gray-100 pt-24 pb-12 px-8">
-            <div class="max-w-[1400px] mx-auto grid grid-cols-2 md:grid-cols-4 gap-16 mb-24 text-left">
-                <div>
-                    <h5 class="section-label" style="text-align: left;">Site Links</h5>
-                    <ul class="space-y-4">
-                        <li><a href="#" class="footer-link">Lounge</a></li>
-                        <li><a href="#" class="footer-link">Dining</a></li>
-                        <li><a href="#" class="footer-link">Office</a></li>
-                        <li><a href="#" class="footer-link">Bed Room</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h5 class="section-label" style="text-align: left;">Client Service</h5>
-                    <ul class="space-y-4">
-                        <li><a href="#" class="footer-link">FAQ</a></li>
-                        <li><a href="#" class="footer-link">Contact</a></li>
-                        <li><a href="#" class="footer-link">Atelier</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h5 class="section-label" style="text-align: left;">Legal Info</h5>
-                    <ul class="space-y-4">
-                        <li><a href="#" class="footer-link">Privacy</a></li>
-                        <li><a href="#" class="footer-link">Terms</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h5 class="section-label" style="text-align: left;">Newsletter</h5>
-                    <input type="text" placeholder="EMAIL" class="newsletter-input">
-                </div>
-            </div>
-            <div class="text-[9px] text-gray-400 tracking-[0.4em] uppercase text-center md:text-right pt-12 border-t border-gray-50">
-                © 2024 Eastern Edition Clone. All Rights Reserved.
-            </div>
-        </footer>
+       <footer class="site-footer">
+    <!-- Main 4-Column Navigation Grid -->
+    <div class="footer-grid">
+        
+        <!-- Column 1: Products -->
+        <div class="footer-column">
+            <h4 class="footer-col-title">Products</h4>
+            <ul class="footer-list">
+                <li><p>By Category</p></li>
+                <li><a href="/lounge" class="footer-link">Lounge</a></li>
+                <li><a href="/dining" class="footer-link">Dining</a></li>
+                <li><a href="/office" class="footer-link">Office</a></li>
+                <li><a href="/bedroom" class="footer-link">Bed Room</a></li>
+            </ul>
+        </div>
+
+        <!-- Column 2: Client Service -->
+        <div class="footer-column">
+            <h4 class="footer-col-title">Client Service</h4>
+            <ul class="footer-list">
+                <li><a href="/faq" class="footer-link">FAQ</a></li>
+                <li><a href="/contact" class="footer-link">Contact</a></li>
+                <li><a href="/location" class="footer-link">Location</a></li>
+            </ul>
+        </div>
+
+        <!-- Column 3: Legal Info -->
+        <div class="footer-column">
+            <h4 class="footer-col-title">Legal Info</h4>
+            <ul class="footer-list">
+                <li><a href="/privacy" class="footer-link">Privacy Policy</a></li>
+                <li><a href="/terms" class="footer-link">Terms of Use</a></li>
+                <li><a href="/information" class="footer-link">Information Use</a></li>
+            </ul>
+        </div>
+
+        <!-- Column 4: Newsletter Box -->
+        <div class="footer-column">
+            <h4 class="footer-col-title">Newsletter</h4>
+            <ul class="footer-list">
+                <li><p>SUBSCRIBE TO OUR NEWSLETTER*</p></li>
+                <li>
+                    <form action="#" method="POST">
+                        <input type="email" class="newsletter-input" placeholder="ENTER YOUR E-MAIL ADDRESS" required>
+                        <span class="newsletter-consent">Personal information collection and usage agreement.</span>
+                    </form>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- Bottom Meta Corporate Data Block -->
+    <div class="footer-bottom">
+        <div class="company-meta">
+            COMPANY: Eastern Edition Co., Ltd. &nbsp;|&nbsp; OWNER: Daesun Im &nbsp;|&nbsp; CPO: Hadley Hong<br>
+            ADDRESS: 17, Eonju-ro 133-gil, Gangnam-gu, Seoul, KR &nbsp;|&nbsp; TEL: 070.8129.1111<br>
+            BUSINESS LICENSE: 676-86-02435 &nbsp;|&nbsp; MAIL ORDER LICENSE: No. 2022-Seoul Gangnam-01540 &nbsp;|&nbsp; E-MAIL: contact@eastern-edition.com
+        </div>
+        <div class="copyright">
+            &copy; EasternEdition All rights reserved.
+        </div>
+    </div>
+</footer>
     </main>
 
 </body>
