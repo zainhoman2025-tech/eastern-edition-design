@@ -44,7 +44,7 @@
     
     <!-- Slide 1 -->
     <div class="slide absolute inset-0 opacity-100 transition-opacity duration-1000 ease-in-out">
-        <img src="https://m.en.eastern-edition.com/web/upload/share-image-2-021b16121860c787dfe8e9e73a9fab70.jpg" class="w-full h-full object-cover" alt="Eastern Edition Campaign">
+        <img src="	https://m.en.eastern-edition.com/web/upload/epblossom/img/easternedition-atelier-mobile-0***.jpg" class="w-full h-full object-cover" alt="Eastern Edition Campaign">
         
         <!-- Reference Heading Layout: Left Aligned, Bold Accent-Less Typo -->
         <div class="absolute top-[35%] left-12 md:left-20 max-w-xl text-white">
@@ -86,7 +86,7 @@
 
     <!-- Slide 5 -->
     <div class="slide absolute inset-0 opacity-0 transition-opacity duration-1000 ease-in-out">
-        <img src="https://m.en.eastern-edition.com/web/upload/epblossom/img/easternedition-atelier-mobile-0.jpg" class="w-full h-full object-cover" alt="Eastern Edition Archive View">
+        <img src="https://m.en.eastern-edition.com/web/upload/epblossom/img/main-mobile-3.jpg" class="w-full h-full object-cover" alt="Eastern Edition Archive View">
         <div class="absolute top-[35%] left-12 md:left-20 max-w-xl text-white">
             <h2 class="text-2xl md:text-[32px] font-light uppercase tracking-[0.12em] leading-[1.4]">
                 Spatial Narratives<br>Design Archive 2026
@@ -232,27 +232,61 @@
 </footer>
     </main>
 
-    <script>
+   <script>
     document.addEventListener("DOMContentLoaded", () => {
         const slides = document.querySelectorAll("#hero-slider .slide");
+        const digitCounter = document.getElementById("slide-digit-counter");
+        const prevBtn = document.getElementById("prev-slide-btn");
+        const nextBtn = document.getElementById("next-slide-btn");
+        
         let currentSlide = 0;
-        const slideInterval = 9000; // Time each slide stays active (5 seconds)
+        let slideTimer;
+        const intervalDuration = 8000; // 5 seconds interval time duration 
 
-        function nextSlide() {
-            // Fade out current slide
+        function updateSlidePosition(nextIndex) {
+            // Fade Out Step
             slides[currentSlide].classList.remove("opacity-100");
             slides[currentSlide].classList.add("opacity-0");
 
-            // Cycle index safely back to 0 at the end of loop
-            currentSlide = (currentSlide + 1) % slides.length;
+            currentSlide = nextIndex;
 
-            // Fade in next slide
+            // Fade In Step
             slides[currentSlide].classList.remove("opacity-0");
             slides[currentSlide].classList.add("opacity-100");
+
+            // Text State Counter Mutation Layer (e.g., 2 / 5)
+            digitCounter.textContent = `${currentSlide + 1} / ${slides.length}`;
         }
 
-        // Initialize the cycle loop
-        setInterval(nextSlide, slideInterval);
+        function triggerNext() {
+            const nextIndex = (currentSlide + 1) % slides.length;
+            updateSlidePosition(nextIndex);
+        }
+
+        function triggerPrev() {
+            const prevIndex = (currentSlide - 1 + slides.length) % slides.length;
+            updateSlidePosition(prevIndex);
+        }
+
+        // Loop Auto-Start Cycle
+        function startAutoCycle() {
+            clearInterval(slideTimer);
+            slideTimer = setInterval(triggerNext, intervalDuration);
+        }
+
+        // Action Click Control Receivers 
+        nextBtn.addEventListener("click", () => {
+            triggerNext();
+            startAutoCycle(); // Resets timer countdown cleanly on manual choice
+        });
+
+        prevBtn.addEventListener("click", () => {
+            triggerPrev();
+            startAutoCycle();
+        });
+
+        // Initialize Loop Start
+        startAutoCycle();
     });
 </script>
 </body>
