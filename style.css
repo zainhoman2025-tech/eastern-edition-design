@@ -1,0 +1,112 @@
+/* EASTERN EDITION GLOBAL STYLE SHEET */
+
+:root {
+    --bg-main: #FFFFFF;
+    --text-primary: #000000;
+    --text-secondary: #777777;
+    --text-muted: #999999;
+    --border-light: #EAEAEA;
+    --border-faint: #F0F0F0;
+    --studio-bg: #F4F4F2;
+    --editorial-bg: #F9F9F9;
+    --font-main: 'Inter', sans-serif;
+    --font-heading: 'Playfair Display', serif;
+}
+
+body {
+    font-family: var(--font-main);
+    color: var(--text-primary);
+    background-color: var(--bg-main);
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+}
+
+.logo {
+    font-family: var(--font-heading);
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--text-primary);
+}
+
+.nav-link {
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-primary);
+    font-weight: 300;
+    transition: opacity 0.3s ease;
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    opacity: 0.6;
+}
+
+.section-label {
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #888888;
+    margin-bottom: 2rem;
+    display: block;
+    text-align: center;
+}
+
+.full-bleed {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+}
+
+.studio-bg {
+    background-color: var(--studio-bg);
+}
+
+.editorial-bg {
+    background-color: var(--editorial-bg);
+}
+
+.footer-link {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-secondary);
+    transition: color 0.3s ease;
+    text-decoration: none;
+    display: block;
+}
+
+.footer-link:hover {
+    color: var(--text-primary);
+}
+
+/* Custom layout adjustments */
+.sticky-header {
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-faint);
+}
+
+.hero-text {
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.newsletter-input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid var(--border-light);
+    padding: 0.5rem 0;
+    font-size: 10px;
+    outline: none;
+    transition: border-color 0.3s ease;
+    background: transparent;
+}
+
+.newsletter-input:focus {
+    border-color: var(--text-primary);
+}
