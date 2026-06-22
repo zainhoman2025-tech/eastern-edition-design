@@ -139,7 +139,7 @@ body {
 
 /* --- THE MASTER FOOTER STYLES --- */
 .site-footer {
-    background-color: var(--bg-main);
+    background-color: #111111;
     border-top: 1px solid var(--border-light);
     padding: 5rem 3rem 3rem 3rem;
     font-family: var(--font-main);
