@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EASTERN EDITION | Bridging the Past to the Future</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; color: #111111; background-color: #FFFFFF; margin: 0; padding: 0; }
+        .logo { font-family: 'Playfair Display', serif; letter-spacing: 0.3em; text-transform: uppercase; color: #000000; }
+        .nav-link { font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; color: #000000; font-weight: 300; transition: opacity 0.3s ease; }
+        .nav-link:hover { opacity: 0.6; }
+        .section-label { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: #888888; margin-bottom: 2rem; display: block; }
+        .full-bleed { width: 100vw; position: relative; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw; background-color: #FFFFFF; }
+        .divider-thin { border-color: #EAEAEA; border-width: 1px; border-style: solid; }
+        .footer-link { font-size: 10px; text-transform: uppercase; tracking-widest: 0.1em; color: #888888; transition: color 0.3s ease; }
+        .footer-link:hover { color: #000000; }
+        .studio-bg { background-color: #F4F4F2; }
+        .editorial-bg { background-color: #F9F9F9; }
+    </style>
+</head>
+<body class="antialiased overflow-x-hidden">
+
+    <!-- Section 1: Sticky Header -->
+    <header class="fixed w-full top-0 z-[100] bg-white/95 backdrop-blur-md border-b border-[#F0F0F0] px-8 py-6 flex items-center justify-between">
+        <div class="flex items-center space-x-8">
+            <button class="p-1"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M4 8h16M4 16h16"></path></svg></button>
+            <nav class="hidden lg:flex space-x-10">
+                <a href="#" class="nav-link">Products</a>
+                <a href="#" class="nav-link">Project</a>
+                <a href="#" class="nav-link">About</a>
+                <a href="#" class="nav-link">Bespoke</a>
+            </nav>
+        </div>
+        <div class="logo text-xl font-medium">Eastern Edition</div>
+        <div class="flex items-center space-x-6">
+            <a href="#" class="nav-link hidden md:block">EN/KR</a>
+            <button><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg></button>
+        </div>
+    </header>
+
+    <main class="pt-[80px]">
+        <!-- Section 2: Full-Bleed Slider -->
+        <section class="full-bleed h-[90vh] bg-gray-100 relative overflow-hidden">
+            <img src="https://m.en.eastern-edition.com/web/upload/share-image-2-021b16121860c787dfe8e9e73a9fab70.jpg" class="w-full h-full object-cover brightness-90" alt="Hero">
+            <div class="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-6">
+                <span class="text-[10px] tracking-[0.4em] uppercase mb-4">New Collection</span>
+                <h2 class="logo text-4xl md:text-6xl mb-8">Dansoon Collection</h2>
+                <a href="#" class="border border-white px-12 py-4 text-[10px] tracking-[0.2em] uppercase">Discover Story</a>
+            </div>
+        </section>
+
+        <!-- Section 3: Category Grid -->
+        <section class="max-w-[1400px] mx-auto px-8 py-24 bg-[#FFFFFF]">
+            <span class="section-label text-center">Collections</span>
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="studio-bg aspect-[3/4] flex flex-col items-center justify-center p-8">
+                    <img src="https://cafe24img.poxo.com/eichjay/web/product/tiny/202601/f73ab7e312260989d9e6a8f1d1a0d295.png" class="mb-4" alt="Table">
+                    <span class="nav-link font-medium">Table</span>
+                </div>
+                <div class="studio-bg aspect-[3/4] flex flex-col items-center justify-center p-8">
+                    <img src="https://cafe24img.poxo.com/eichjay/web/product/tiny/202411/2a77756f2cac7387c7f1cea3613905b8.png" class="mb-4" alt="Chair">
+                    <span class="nav-link font-medium">Chair</span>
+                </div>
+                <div class="studio-bg aspect-[3/4] aspect-[3/4] flex flex-col items-center justify-center p-8">
+                    <img src="https://cafe24img.poxo.com/eichjay/web/product/tiny/202606/192854ba14e1b7ef75ab7ff2c9fc3334.png" class="mb-4" alt="Sofa">
+                    <span class="nav-link font-medium">Sofa</span>
+                </div>
+                <div class="studio-bg aspect-[3/4] flex flex-col items-center justify-center p-8">
+                    <img src="https://cafe24img.poxo.com/eichjay/web/product/tiny/202603/34c9183548828e53c13190d2f7aa8fcc.png" class="mb-4" alt="Bed">
+                    <span class="nav-link font-medium">Bed</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Projects -->
+        <section class="editorial-bg py-24 px-8">
+            <div class="max-w-[1400px] mx-auto flex flex-col lg:flex-row gap-12 items-center">
+                <img src="https://m.en.eastern-edition.com/web/upload/share-image-2-021b16121860c787dfe8e9e73a9fab70.jpg" class="w-full lg:w-3/5 grayscale" alt="Project">
+                <div>
+                    <h3 class="logo text-2xl mb-6 text-[#000000]">Blue Bottle Studio</h3>
+                    <p class="text-[11px] text-[#777777] uppercase tracking-widest leading-loose mb-10">A spatial design collaboration blending the modern coffee experience with traditional Korean materiality.</p>
+                    <a href="#" class="nav-link border-b border-[#000000] pb-2">View Portfolio</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Philosophy -->
+        <section class="max-w-[800px] mx-auto px-8 py-32 text-center bg-[#FFFFFF]">
+            <h2 class="logo text-3xl mb-12 text-[#000000]">Bridging the Past, to the Future</h2>
+            <p class="text-xs uppercase tracking-[0.2em] leading-loose text-[#777777] mb-16">Our furniture is more than an object; it is an exploration of the Korean way of life. Using solid oaks, natural textiles, and traditional Hanok joinery.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="border border-[#F0F0F0] p-12 hover:bg-[#000000] hover:text-[#FFFFFF] transition-all group">
+                    <h4 class="nav-link group-hover:text-[#FFFFFF]">Bespoke Inquiries</h4>
+                </div>
+                <div class="border border-[#F0F0F0] p-12 hover:bg-[#000000] hover:text-[#FFFFFF] transition-all group">
+                    <h4 class="nav-link group-hover:text-[#FFFFFF]">Material Library</h4>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: Master Footer -->
+        <footer class="bg-[#FFFFFF] border-t border-[#F0F0F0] pt-24 pb-12 px-8">
+            <div class="max-w-[1400px] mx-auto grid grid-cols-2 md:grid-cols-4 gap-16 mb-24 text-left">
+                <div>
+                    <h5 class="section-label">Site Links</h5>
+                    <ul class="space-y-4">
+                        <li><a href="#" class="footer-link">Lounge</a></li>
+                        <li><a href="#" class="footer-link">Dining</a></li>
+                        <li><a href="#" class="footer-link">Office</a></li>
+                        <li><a href="#" class="footer-link">Bed Room</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="section-label">Client Service</h5>
+                    <ul class="space-y-4">
+                        <li><a href="#" class="footer-link">FAQ</a></li>
+                        <li><a href="#" class="footer-link">Contact</a></li>
+                        <li><a href="#" class="footer-link">Atelier</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="section-label">Legal Info</h5>
+                    <ul class="space-y-4">
+                        <li><a href="#" class="footer-link">Privacy</a></li>
+                        <li><a href="#" class="footer-link">Terms</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="section-label">Newsletter</h5>
+                    <input type="text" placeholder="EMAIL" class="w-full border-b border-[#EAEAEA] py-2 text-[10px] outline-none focus:border-[#000000] transition-colors">
+                </div>
+            </div>
+            <div class="text-[9px] text-[#999999] tracking-[0.4em] uppercase text-center md:text-right pt-12 border-t border-[#F0F0F0]">
+                © 2024 Eastern Edition Clone. All Rights Reserved.
+            </div>
+        </footer>
+    </main>
+
+</body>
+</html>
