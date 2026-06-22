@@ -1,6 +1,9 @@
-/* EASTERN EDITION GLOBAL STYLE SHEET */
+/* ==========================================================================
+   EASTERN EDITION GLOBAL STYLE SHEET (COMPLETE)
+   ========================================================================== */
 
 :root {
+    /* Color Palette */
     --bg-main: #FFFFFF;
     --text-primary: #000000;
     --text-secondary: #777777;
@@ -9,25 +12,49 @@
     --border-faint: #F0F0F0;
     --studio-bg: #F4F4F2;
     --editorial-bg: #F9F9F9;
-    --font-main: 'Inter', sans-serif;
-    --font-heading: 'Playfair Display', serif;
+    
+    /* Typography Stacks */
+    /* Note: Eastern Edition uses an entirely modern, thin sans-serif system. */
+    --font-main: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-heading: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+/* --- GLOBAL SAFETY RESETS --- */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden; /* Stops layout breakage or unexpected horizontal shifting */
 }
 
 body {
     font-family: var(--font-main);
     color: var(--text-primary);
     background-color: var(--bg-main);
-    margin: 0;
-    padding: 0;
     -webkit-font-smoothing: antialiased;
-    overflow-x: hidden;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* --- HEADER & NAVIGATION --- */
+.sticky-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-faint);
 }
 
 .logo {
     font-family: var(--font-heading);
-    letter-spacing: 0.3em;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.35em;
     text-transform: uppercase;
     color: var(--text-primary);
+    text-decoration: none;
+    display: inline-block;
 }
 
 .nav-link {
@@ -41,72 +68,192 @@ body {
 }
 
 .nav-link:hover {
-    opacity: 0.6;
+    opacity: 0.5;
 }
 
+/* --- EDITORIAL COMPONENTS --- */
 .section-label {
     font-size: 10px;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.25em;
     text-transform: uppercase;
-    color: #888888;
-    margin-bottom: 2rem;
+    color: var(--text-secondary);
+    margin-bottom: 2.5rem;
     display: block;
     text-align: center;
+    font-weight: 400;
 }
 
+.hero-text {
+    font-weight: 300;
+    letter-spacing: 0.08em;
+    line-height: 1.4;
+    /* Clean image overlays skip text shadows to look more premium */
+}
+
+.editorial-divider {
+    border: 0;
+    border-top: 1px solid var(--border-light);
+    margin: 0;
+    width: 100%;
+}
+
+/* --- IMAGE CONTAINERS & SCROLLERS --- */
+.img-container {
+    overflow: hidden;
+    position: relative;
+    background-color: var(--studio-bg);
+}
+
+.img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.img-container:hover img {
+    transform: scale(1.03); /* Graceful premium hover scale */
+}
+
+.horizontal-slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+}
+
+.horizontal-slider::-webkit-scrollbar {
+    display: none; /* Strips ugly browser scrollbars on carousels */
+}
+
+/* --- LAYOUT UTILITIES --- */
 .full-bleed {
     width: 100vw;
     position: relative;
     left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
+    transform: translateX(-50%);
 }
 
-.studio-bg {
-    background-color: var(--studio-bg);
+.studio-bg { background-color: var(--studio-bg); }
+.editorial-bg { background-color: var(--editorial-bg); }
+
+/* --- THE MASTER FOOTER STYLES --- */
+.site-footer {
+    background-color: var(--bg-main);
+    border-top: 1px solid var(--border-light);
+    padding: 5rem 3rem 3rem 3rem;
+    font-family: var(--font-main);
 }
 
-.editorial-bg {
-    background-color: var(--editorial-bg);
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.footer-col-title {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+    margin-top: 0;
+}
+
+.footer-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-list li {
+    margin-bottom: 0.8rem;
+}
+
+.footer-list p {
+    font-size: 11px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: 0 0 0.8rem 0;
 }
 
 .footer-link {
     font-size: 10px;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.12em;
     color: var(--text-secondary);
     transition: color 0.3s ease;
     text-decoration: none;
     display: block;
+    font-weight: 300;
 }
 
 .footer-link:hover {
     color: var(--text-primary);
 }
 
-/* Custom layout adjustments */
-.sticky-header {
-    background-color: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--border-faint);
-}
-
-.hero-text {
-    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
+/* Newsletter Input and Verification Checkbox Details */
 .newsletter-input {
     width: 100%;
     border: none;
     border-bottom: 1px solid var(--border-light);
-    padding: 0.5rem 0;
-    font-size: 10px;
+    padding: 0.6rem 0;
+    font-size: 11px;
     outline: none;
-    transition: border-color 0.3s ease;
+    transition: border-color 0.4s ease;
     background: transparent;
+    border-radius: 0; /* Clears sudden iOS safari rounded inputs */
 }
 
 .newsletter-input:focus {
     border-color: var(--text-primary);
+}
+
+.newsletter-consent {
+    font-size: 9px;
+    color: var(--text-muted);
+    line-height: 1.4;
+    margin-top: 0.8rem;
+    display: block;
+}
+
+/* Corporate Metadata Block at Base */
+.footer-bottom {
+    border-top: 1px solid var(--border-faint);
+    padding-top: 2rem;
+}
+
+.company-meta {
+    font-size: 10px;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    letter-spacing: 0.02em;
+    margin-bottom: 1.5rem;
+}
+
+.copyright {
+    font-size: 10px;
+    color: var(--text-muted);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+/* --- RESPONSIVE MEDIA QUERIES --- */
+@media (max-width: 900px) {
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+    .site-footer {
+        padding: 4rem 1.5rem 2rem 1.5rem;
+    }
 }
