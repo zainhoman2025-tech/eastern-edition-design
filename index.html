@@ -39,15 +39,60 @@
     </header>
 
     <main class="pt-[80px]">
-        <!-- HERO CAMPAIGN -->
-        <section class="full-bleed h-[90vh] relative overflow-hidden">
-            <img src="https://m.en.eastern-edition.com/web/upload/share-image-2-021b16121860c787dfe8e9e73a9fab70.jpg" class="w-full h-full object-cover brightness-90" alt="Eastern Edition Campaign">
-            <div class="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-6">
-                <span class="text-[10px] tracking-[0.4em] uppercase mb-4">New Collection</span>
-                <h2 class="logo text-4xl md:text-6xl mb-8 hero-text">Dansoon Collection</h2>
-                <a href="#" class="border border-white px-12 py-4 text-[10px] tracking-[0.2em] uppercase hover:bg-white hover:text-black transition-all">Discover Story</a>
-            </div>
-        </section>
+       <!-- HERO CAMPAIGN SLIDER -->
+<section id="hero-slider" class="full-bleed h-[90vh] relative overflow-hidden bg-black">
+    
+    <!-- Slide 1 -->
+    <div class="slide absolute inset-0 opacity-100 transition-opacity duration-1000 ease-in-out">
+        <img src="https://m.en.eastern-edition.com/web/upload/share-image-2-021b16121860c787dfe8e9e73a9fab70.jpg" class="w-full h-full object-cover brightness-75" alt="Eastern Edition Campaign">
+        <div class="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-6">
+            <span class="text-[10px] tracking-[0.4em] uppercase mb-4">New Collection</span>
+            <h2 class="logo text-4xl md:text-6xl mb-8 hero-text">Dansoon Collection</h2>
+            <a href="#" class="border border-white px-12 py-4 text-[10px] tracking-[0.2em] uppercase hover:bg-white hover:text-black transition-all">Discover Story</a>
+        </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="slide absolute inset-0 opacity-0 transition-opacity duration-1000 ease-in-out">
+        <img src="https://m.en.eastern-edition.com/web/upload/epblossom/img/main-mobile-cup.jpg" class="w-full h-full object-cover brightness-75" alt="EP Blossom Cup Collection">
+        <div class="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-6">
+            <span class="text-[10px] tracking-[0.4em] uppercase mb-4">Craftsmanship</span>
+            <h2 class="logo text-4xl md:text-6xl mb-8 hero-text">Ceramic Editions</h2>
+            <a href="#" class="border border-white px-12 py-4 text-[10px] tracking-[0.2em] uppercase hover:bg-white hover:text-black transition-all">Explore Trace</a>
+        </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="slide absolute inset-0 opacity-0 transition-opacity duration-1000 ease-in-out">
+        <img src="https://m.en.eastern-edition.com/web/upload/epblossom/img/easternedition-dansoon-mo-final%20ver-4.jpg" class="w-full h-full object-cover brightness-75" alt="Dansoon Detail View">
+        <div class="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-6">
+            <span class="text-[10px] tracking-[0.4em] uppercase mb-4">Aesthetic Philosophy</span>
+            <h2 class="logo text-4xl md:text-6xl mb-8 hero-text">Korean Simplicity</h2>
+            <a href="#" class="border border-white px-12 py-4 text-[10px] tracking-[0.2em] uppercase hover:bg-white hover:text-black transition-all">View Campaign</a>
+        </div>
+    </div>
+
+    <!-- Slide 4 -->
+    <div class="slide absolute inset-0 opacity-0 transition-opacity duration-1000 ease-in-out">
+        <img src="https://m.en.eastern-edition.com/web/upload/epblossom/img/easternedition-atelier-mobile-1.jpg" class="w-full h-full object-cover brightness-75" alt="Eastern Edition Atelier Spaces">
+        <div class="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-6">
+            <span class="text-[10px] tracking-[0.4em] uppercase mb-4">The Atelier</span>
+            <h2 class="logo text-4xl md:text-6xl mb-8 hero-text">Showroom Space</h2>
+            <a href="#" class="border border-white px-12 py-4 text-[10px] tracking-[0.2em] uppercase hover:bg-white hover:text-black transition-all">Book Visit</a>
+        </div>
+    </div>
+
+    <!-- Slide 5 -->
+    <div class="slide absolute inset-0 opacity-0 transition-opacity duration-1000 ease-in-out">
+        <img src="https://m.en.eastern-edition.com/web/upload/epblossom/img/easternedition-atelier-mobile-0.jpg" class="w-full h-full object-cover brightness-75" alt="Eastern Edition Archive View">
+        <div class="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-6">
+            <span class="text-[10px] tracking-[0.4em] uppercase mb-4">Design Archive</span>
+            <h2 class="logo text-4xl md:text-6xl mb-8 hero-text">Spatial Narrative</h2>
+            <a href="#" class="border border-white px-12 py-4 text-[10px] tracking-[0.2em] uppercase hover:bg-white hover:text-black transition-all">Read Archive</a>
+        </div>
+    </div>
+
+</section>
 
         <!-- CATEGORIES GRID -->
         <section class="max-w-[1400px] mx-auto px-8 py-24">
@@ -165,5 +210,29 @@
 </footer>
     </main>
 
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const slides = document.querySelectorAll("#hero-slider .slide");
+        let currentSlide = 0;
+        const slideInterval = 5000; // Time each slide stays active (5 seconds)
+
+        function nextSlide() {
+            // Fade out current slide
+            slides[currentSlide].classList.remove("opacity-100");
+            slides[currentSlide].classList.add("opacity-0");
+
+            // Cycle index safely back to 0 at the end of loop
+            currentSlide = (currentSlide + 1) % slides.length;
+
+            // Fade in next slide
+            slides[currentSlide].classList.remove("opacity-0");
+            slides[currentSlide].classList.add("opacity-100");
+        }
+
+        // Initialize the cycle loop
+        setInterval(nextSlide, slideInterval);
+    });
+</script>
 </body>
+    
 </html>
