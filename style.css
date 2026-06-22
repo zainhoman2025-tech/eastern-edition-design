@@ -137,10 +137,10 @@ body {
 .studio-bg { background-color: var(--studio-bg); }
 .editorial-bg { background-color: var(--editorial-bg); }
 
-/* --- THE MASTER FOOTER STYLES --- */
+/* --- THE MASTER DARK FOOTER STYLES --- */
 .site-footer {
-    background-color: #111111;
-    border-top: 1px solid var(--border-light);
+    background-color: #111111; /* Rich dark background */
+    border-top: 1px solid #222222;
     padding: 5rem 3rem 3rem 3rem;
     font-family: var(--font-main);
 }
@@ -157,7 +157,7 @@ body {
     font-weight: 500;
     letter-spacing: 0.15em;
     text-transform: uppercase;
-    color: var(--text-primary);
+    color: #FFFFFF; /* White headings for visibility */
     margin-bottom: 1.5rem;
     margin-top: 0;
 }
@@ -174,7 +174,7 @@ body {
 
 .footer-list p {
     font-size: 11px;
-    color: var(--text-secondary);
+    color: #999999; /* Muted gray text */
     line-height: 1.6;
     margin: 0 0 0.8rem 0;
 }
@@ -183,7 +183,7 @@ body {
     font-size: 10px;
     text-transform: uppercase;
     letter-spacing: 0.12em;
-    color: var(--text-secondary);
+    color: #999999; /* Muted links */
     transition: color 0.3s ease;
     text-decoration: none;
     display: block;
@@ -191,43 +191,48 @@ body {
 }
 
 .footer-link:hover {
-    color: var(--text-primary);
+    color: #FFFFFF; /* Highlighting links to white on hover */
 }
 
-/* Newsletter Input and Verification Checkbox Details */
+/* Newsletter Input Adjustments for Dark Background */
 .newsletter-input {
     width: 100%;
     border: none;
-    border-bottom: 1px solid var(--border-light);
+    border-bottom: 1px solid #333333; /* Darker border rule */
     padding: 0.6rem 0;
     font-size: 11px;
     outline: none;
     transition: border-color 0.4s ease;
     background: transparent;
-    border-radius: 0; /* Clears sudden iOS safari rounded inputs */
+    color: #FFFFFF; /* White text input */
+    border-radius: 0;
 }
 
 .newsletter-input:focus {
-    border-color: var(--text-primary);
+    border-color: #FFFFFF;
+}
+
+.newsletter-input::placeholder {
+    color: #555555; /* Soft placeholder */
 }
 
 .newsletter-consent {
     font-size: 9px;
-    color: var(--text-muted);
+    color: #555555;
     line-height: 1.4;
     margin-top: 0.8rem;
     display: block;
 }
 
-/* Corporate Metadata Block at Base */
+/* Bottom Corporate Data Block */
 .footer-bottom {
-    border-top: 1px solid var(--border-faint);
+    border-top: 1px solid #222222;
     padding-top: 2rem;
 }
 
 .company-meta {
     font-size: 10px;
-    color: var(--text-secondary);
+    color: #777777; /* Soft mid-grey for legal details */
     line-height: 1.8;
     letter-spacing: 0.02em;
     margin-bottom: 1.5rem;
@@ -235,7 +240,7 @@ body {
 
 .copyright {
     font-size: 10px;
-    color: var(--text-muted);
+    color: #444444;
     letter-spacing: 0.05em;
     text-transform: uppercase;
 }
@@ -255,5 +260,7 @@ body {
     }
     .site-footer {
         padding: 4rem 1.5rem 2rem 1.5rem;
+    }
+}
     }
 }
