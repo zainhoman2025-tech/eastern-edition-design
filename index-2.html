@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDInteriors | Where Design Embraces Life</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght=200;300;400;500&family=Playfair+Display:wght=400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head> 
+<body class="antialiased">
+
+    <header class="fixed w-full top-0 z-[100] sticky-header px-8 py-6 flex items-center justify-between">
+        <div class="flex items-center space-x-8">
+            <button class="p-1">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M4 8h16M4 16h16"></path>
+                </svg>
+            </button>
+            <nav class="hidden lg:flex space-x-10">
+                <a href="#" class="nav-link">Products</a>
+                <a href="#" class="nav-link">Project</a>
+                <a href="#" class="nav-link">About</a>
+                <a href="#" class="nav-link">Bespoke</a>
+            </nav>
+        </div>
+        <div class="logo text-sm font-medium tracking-wider uppercase">EDInteriors</div>
+        <div class="flex items-center space-x-6">
+            <a href="#" class="nav-link hidden md:block">EN/KR</a>
+            <button>
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <main class="pt-[80px]">
+        
+        <section id="hero-slider" class="full-bleed h-[90vh] relative overflow-hidden bg-[#B5B2A9]">
+            
+            <div class="slide absolute inset-0 opacity-100 transition-opacity duration-1000 ease-in-out">
+                <img src="https://m.en.eastern-edition.com/web/upload/epblossom/img/easternedition-atelier-mobile-0***.jpg" class="w-full h-full object-cover" alt="EDInteriors Campaign">
+                <div class="absolute top-[35%] left-12 md:left-20 max-w-xl text-white">
+                    <h2 class="text-sm md:text-lg font-light uppercase tracking-[0.12em] leading-[1.4]">
+                        Where Design Embraces Life<br><span class="opacity-60 text-xs font-normal tracking-widest block mt-2">EDInteriors Studio</span>
+                    </h2>
+                </div>
+            </div>
+
+            <div class="slide absolute inset-0 opacity-0 transition-opacity duration-1000 ease-in-out">
+                <img src="https://m.en.eastern-edition.com/web/upload/epblossom/img/main-mobile-cup.jpg" class="w-full h-full object-cover" alt="EP Blossom Cup Collection">
+                <div class="absolute top-[35%] left-12 md:left-20 max-w-xl text-white">
+                    <h2 class="text-sm md:text-lg font-light uppercase tracking-[0.12em] leading-[1.4]">
+                        Tracing Korean History<br>Ceramic Cup Set (4)
+                    </h2>
+                </div>
+            </div>
+
+            <div class="slide absolute inset-0 opacity-0 transition-opacity duration-1000 ease-in-out">
+                <img src="https://m.en.eastern-edition.com/web/upload/epblossom/img/easternedition-dansoon-mo-final%20ver-4.jpg" class="w-full h-full object-cover" alt="Dansoon Detail View">
+                <div class="absolute top-[35%] left-12 md:left-20 max-w-xl text-white">
+                    <h2 class="text-sm md:text-lg font-light uppercase tracking-[0.12em] leading-[1.4]">
+                        The Light & Shadow<br>of Traditional Hanok
+                    </h2>
+                </div>
+            </div>
+
+            <div class="slide absolute inset-0 opacity-0 transition-opacity duration-1000 ease-in-out">
+                <img src="https://m.en.eastern-edition.com/web/upload/epblossom/img/easternedition-atelier-mobile-1.jpg" class="w-full h-full object-cover" alt="EDInteriors Atelier Spaces">
+                <div class="absolute top-[35%] left-12 md:left-20 max-w-xl text-white">
+                    <h2 class="text-sm md:text-lg font-light uppercase tracking-[0.12em] leading-[1.4]">
+                        The Atelier Concept<br>Showroom Exploration
+                    </h2>
+                </div>
+            </div>
+
+            <div class="slide absolute inset-0 opacity-0 transition-opacity duration-1000 ease-in-out">
+                <img src="https://m.en.eastern-edition.com/web/upload/epblossom/img/main-mobile-3.jpg" class="w-full h-full object-cover" alt="EDInteriors Archive View">
+                <div class="absolute top-[35%] left-12 md:left-20 max-w-xl text-white">
+                    <h2 class="text-sm md:text-lg font-light uppercase tracking-[0.12em] leading-[1.4]">
+                        Spatial Narratives<br>Design Archive 2026
+                    </h2>
+                </div>
+            </div>
+
+            <div class="absolute inset-x-0 bottom-0 px-8 md:px-16 pb-12 flex flex-col items-center pointer-events-none">
+                <a href="#" class="pointer-events-auto w-full max-w-[calc(100%-2rem)] md:max-w-[95%] border border-white/60 bg-transparent py-4 text-center text-white text-[11px] font-light tracking-[0.15em] hover:bg-white hover:text-black transition-all duration-300 ease-in-out mb-8">
+                    Discover the Collection Story
+                </a>
+
+                <div class="w-full flex items-center justify-between text-white text-xs tracking-widest font-light px-2">
+                    <button id="prev-slide-btn" class="pointer-events-auto text-xl md:text-2xl hover:opacity-50 transition-opacity">&larr;</button>
+                    <span id="slide-digit-counter" class="text-[11px] font-normal tracking-[0.2em] min-w-[2.5rem] text-center">1 / 5</span>
+                    <button id="next-slide-btn" class="pointer-events-auto text-xl md:text-2xl hover:opacity-50 transition-opacity">&rarr;</button>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="max-w-[1400px] mx-auto px-8 py-24">
+            <span class="section-label">Collections</span>
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="studio-bg aspect-[3/4] flex flex-col items-center justify-center p-8">
+                    <img src="https://cafe24img.poxo.com/eichjay/web/product/tiny/202601/f73ab7e312260989d9e6a8f1d1a0d295.png" class="mb-4" alt="Table">
+                    <span class="nav-link font-medium">Table</span>
+                </div>
+                <div class="studio-bg aspect-[3/4] flex flex-col items-center justify-center p-8">
+                    <img src="https://cafe24img.poxo.com/eichjay/web/product/tiny/202411/2a77756f2cac7387c7f1cea3613905b8.png" class="mb-4" alt="Chair">
+                    <span class="nav-link font-medium">Chair</span>
+                </div>
+                <div class="studio-bg aspect-[3/4] flex flex-col items-center justify-center p-8">
+                    <img src="https://cafe24img.poxo.com/eichjay/web/product/tiny/202606/192854ba14e1b7ef75ab7ff2c9fc3334.png" class="mb-4" alt="Sofa">
+                    <span class="nav-link font-medium">Sofa</span>
+                </div>
+                <div class="studio-bg aspect-[3/4] flex flex-col items-center justify-center p-8">
+                    <img src="https://cafe24img.poxo.com/eichjay/web/product/tiny/202603/34c9183548828e53c13190d2f7aa8fcc.png" class="mb-4" alt="Bed">
+                    <span class="nav-link font-medium">Bed</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="max-w-[1400px] mx-auto px-8 py-24 border-t border-gray-100">
+            <span class="section-label">Featured Editions</span>
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+                <div class="md:col-span-7 img-container aspect-[4/5]">
+                    <img src="https://m.en.eastern-edition.com/web/upload/share-image-2-021b16121860c787dfe8e9e73a9fab70.jpg" alt="Dansoon Art furniture Collection">
+                </div>
+                <div class="md:col-span-5 md:pt-20 flex flex-col justify-between h-full">
+                    <div class="max-w-md mb-12">
+                        <h3 class="text-xs tracking-[0.25em] uppercase font-medium mb-4 text-gray-400">01 / Archetype</h3>
+                        <h2 class="text-xl tracking-[0.1em] uppercase font-light leading-relaxed mb-6">The Dansoon Series:<br>Art Furniture</h2>
+                        <p class="text-[11px] text-gray-500 uppercase tracking-widest leading-loose mb-8">
+                            A conceptual examination of simplicity. Each unit features structural framework pulled straight from minimalist historical sketches, optimized for contemporary spatial architectures.
+                        </p>
+                        <a href="#" class="text-[11px] uppercase tracking-widest border-b border-black pb-1 hover:opacity-50 transition-opacity">Discover Collection</a>
+                    </div>
+                    <div class="img-container aspect-[4/3] bg-neutral-100">
+                        <img src="https://m.en.eastern-edition.com/web/upload/epblossom/img/easternedition-dansoon-mo-final%20ver-4.jpg" alt="Dansoon joinery detail">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="max-w-[1400px] mx-auto px-8 py-32 border-t border-gray-100">
+            <div class="mb-20">
+                <span class="text-[10px] tracking-[0.3em] uppercase text-gray-400 block mb-2">Exhibition Space</span>
+                <h2 class="text-xl tracking-[0.15em] uppercase font-light">Studio Gallery</h2>
+            </div>
+
+            <div class="space-y-40">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    <div class="lg:col-span-7 bg-[#F7F6F3] p-6 md:p-12 border border-gray-100">
+                        <span class="text-[9px] tracking-widest text-gray-400 uppercase block mb-4">Board 01 // Object Focus</span>
+                        <div class="aspect-[4/3] w-full overflow-hidden bg-neutral-200 mb-6">
+                            <img src="https://m.en.eastern-edition.com/web/upload/share-image-2-021b16121860c787dfe8e9e73a9fab70.jpg" class="w-full h-full object-cover" alt="Dansoon Armchair">
+                        </div>
+                    </div>
+                    
+                    <div class="lg:col-span-5 lg:pl-8">
+                        <div class="border-b border-gray-200 pb-4 mb-6">
+                            <span class="text-[10px] tracking-[0.2em] text-gray-400 uppercase block mb-1">Inspiration Source</span>
+                            <h3 class="text-sm tracking-widest uppercase font-medium text-neutral-800">Woodcraft & Negative Space</h3>
+                        </div>
+                        <div class="space-y-6">
+                            <h4 class="text-lg tracking-wider uppercase font-light text-black">The Dansoon Lounge Board</h4>
+                            <p class="text-[11px] text-gray-500 uppercase tracking-widest leading-loose">
+                                Designed as a physical translation of traditional ink wash paintings. The core inspiration stems from the concept of "emptiness"—allowing the air and background environment surrounding the chair frame to become part of its structural form.
+                            </p>
+                            <div class="pt-4">
+                                <span class="text-[9px] tracking-[0.2em] text-neutral-400 uppercase block">Material Palette</span>
+                                <span class="text-[11px] tracking-widest uppercase font-light text-neutral-600">Sumi Ink Stained White Oak, Raw Hemp Textile</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    <div class="lg:col-span-5 lg:order-1 order-2 lg:pr-8">
+                        <div class="border-b border-gray-200 pb-4 mb-6">
+                            <span class="text-[10px] tracking-[0.2em] text-gray-400 uppercase block mb-1">Inspiration Source</span>
+                            <h3 class="text-sm tracking-widest uppercase font-medium text-neutral-800">Traditional Eaves (Cheoma)</h3>
+                        </div>
+                        <div class="space-y-6">
+                            <h4 class="text-lg tracking-wider uppercase font-light text-black">The Heritage Dining Surface</h4>
+                            <p class="text-[11px] text-gray-500 uppercase tracking-widest leading-loose">
+                                The structural silhouette references the subtle, mathematical curve found in historical architecture rooflines. This curve maximizes seasonal light projection while maintaining an incredibly light structural weight.
+                            </p>
+                            <div class="pt-4">
+                                <span class="text-[9px] tracking-[0.2em] text-neutral-400 uppercase block">Material Palette</span>
+                                <span class="text-[11px] tracking-widest uppercase font-light text-neutral-600">Natural Solid Ash Wood, Interlocking Wood-Joinery (No Metal Hardware)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-7 lg:order-2 order-1 bg-[#F7F6F3] p-6 md:p-12 border border-gray-100">
+                        <span class="text-[9px] tracking-widest text-gray-400 uppercase block mb-4">Board 02 // Structural Architecture</span>
+                        <div class="aspect-[4/3] w-full overflow-hidden bg-neutral-200 mb-6">
+                            <img src="https://m.en.eastern-edition.com/web/upload/epblossom/img/easternedition-dansoon-mo-final%20ver-4.jpg" class="w-full h-full object-cover" alt="Heritage Dining Table Detail">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="editorial-bg py-24 px-8">
+            <div class="max-w-[1400px] mx-auto flex flex-col lg:flex-row gap-12 items-center">
+                <img src="https://m.en.eastern-edition.com/web/upload/share-image-2-021b16121860c787dfe8e9e73a9fab70.jpg" class="w-full lg:w-3/5 grayscale" alt="Project">
+                <div>
+                    <h3 class="logo text-2xl mb-6">Blue Bottle Studio</h3>
+                    <p class="text-[11px] text-gray-500 uppercase tracking-widest leading-loose mb-10">A spatial design collaboration blending the modern coffee experience with traditional materiality.</p>
+                    <a href="#" class="nav-link border-b border-black pb-2">View Portfolio</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="w-full bg-[#FAF8F5] py-24 px-8 border-t border-b border-gray-100">
+            <div class="max-w-[1400px] mx-auto">
+                <div class="flex justify-between items-end mb-16">
+                    <div>
+                        <span class="text-[10px] tracking-[0.3em] uppercase text-gray-400 block mb-2">Aroma & Form</span>
+                        <h2 class="text-lg tracking-[0.15em] uppercase font-light">Trace by EDInteriors</h2>
+                    </div>
+                    <a href="#" class="text-[11px] uppercase tracking-widest text-gray-500 hover:text-black transition-colors">View All Objects &rarr;</a>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="flex flex-col">
+                        <div class="img-container aspect-square mb-6 bg-white p-12 flex items-center justify-center">
+                            <img src="https://m.en.eastern-edition.com/web/upload/epblossom/img/main-mobile-cup.jpg" class="object-contain" alt="Ceramic cup set">
+                        </div>
+                        <span class="text-[11px] tracking-widest uppercase font-medium">Ceramic Cup Set (4)</span>
+                        <span class="text-[10px] tracking-widest text-gray-400 uppercase mt-1">Tracing History Edition</span>
+                    </div>
+                    <div class="flex flex-col">
+                        <div class="img-container aspect-square mb-6 bg-white p-12 flex items-center justify-center">
+                            <img src="https://m.en.eastern-edition.com/web/upload/epblossom/img/main-mobile-3.jpg" class="object-contain" alt="Spatial Fragrance">
+                        </div>
+                        <span class="text-[11px] tracking-widest uppercase font-medium">EDInteriors Spatial Fragrance</span>
+                        <span class="text-[10px] tracking-widest text-gray-400 uppercase mt-1">The Light & Shadow of Hanok</span>
+                    </div>
+                    <div class="flex flex-col">
+                        <div class="img-container aspect-square mb-6 bg-white p-12 flex items-center justify-center">
+                            <img src="https://cafe24img.poxo.com/eichjay/web/product/tiny/202601/f73ab7e312260989d9e6a8f1d1a0d295.png" class="object-contain" alt="Miniature Table Prototype">
+                        </div>
+                        <span class="text-[11px] tracking-widest uppercase font-medium">Atelier Table Oak Prototype</span>
+                        <span class="text-[10px] tracking-widest text-gray-400 uppercase mt-1">Limited Archive Drop</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="max-w-[1400px] mx-auto px-8 py-24">
+            <span class="section-label">Architectural Archives</span>
+            <div class="horizontal-slider gap-6 overflow-x-auto pb-6">
+                <div class="min-w-[300px] md:min-w-[450px] flex-shrink-0 group cursor-pointer">
+                    <div class="img-container aspect-[3/2] mb-4">
+                        <img src="https://m.en.eastern-edition.com/web/upload/epblossom/img/easternedition-atelier-mobile-1.jpg" alt="UN Village Lanuvo">
+                    </div>
+                    <div class="flex justify-between items-baseline px-1">
+                        <h4 class="text-[11px] tracking-widest uppercase font-medium">UN Village Lanuvo</h4>
+                        <span class="text-[9px] tracking-widest text-gray-400 uppercase">Hannam, KR</span>
+                    </div>
+                </div>
+
+                <div class="min-w-[300px] md:min-w-[450px] flex-shrink-0 group cursor-pointer">
+                    <div class="img-container aspect-[3/2] mb-4">
+                        <img src="https://m.en.eastern-edition.com/web/upload/share-image-2-021b16121860c787dfe8e9e73a9fab70.jpg" alt="Luxembourg Embassy Residence">
+                    </div>
+                    <div class="flex justify-between items-baseline px-1">
+                        <h4 class="text-[11px] tracking-widest uppercase font-medium">Luxembourg Embassy Residence</h4>
+                        <span class="text-[9px] tracking-widest text-gray-400 uppercase">Seoul, KR</span>
+                    </div>
+                </div>
+
+                <div class="min-w-[300px] md:min-w-[450px] flex-shrink-0 group cursor-pointer">
+                    <div class="img-container aspect-[3/2] mb-4">
+                        <img src="https://i.pinimg.com/736x/59/ac/c5/59acc5b49f339f8617d8b01aa8921005.jpg" alt="Muwa Niseko Resort">
+                    </div>
+                    <div class="flex justify-between items-baseline px-1">
+                        <h4 class="text-[11px] tracking-widest uppercase font-medium">Muwa Niseko Alpine Resort</h4>
+                        <span class="text-[9px] tracking-widest text-gray-400 uppercase">Hokkaido, JP</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="w-full bg-[#111111] text-white py-32 px-8 md:px-16">
+            <div class="max-w-[1400px] mx-auto">
+                <div class="mb-24 border-b border-neutral-800 pb-8">
+                    <h2 class="text-xl md:text-2xl tracking-[0.2em] font-normal uppercase mb-2">Selected Works</h2>
+                    <p class="text-[11px] tracking-widest uppercase text-neutral-400">A curation of contemporary architectural and interior studies.</p>
+                </div>
+
+                <div class="space-y-40">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-end">
+                        <div class="lg:col-span-8">
+                            <div class="aspect-[16/10] w-full bg-neutral-900 overflow-hidden">
+                                <img src="https://m.en.eastern-edition.com/web/upload/share-image-2-021b16121860c787dfe8e9e73a9fab70.jpg" class="w-full h-full object-cover" alt="Luxembourg Embassy">
+                            </div>
+                        </div>
+                        <div class="lg:col-span-4 lg:pl-6 pb-2">
+                            <span class="text-[10px] tracking-[0.3em] uppercase text-neutral-500 block mb-3">Project 01 // Embassy Residence</span>
+                            <h3 class="text-lg tracking-wider uppercase font-light mb-4">Luxembourg Embassy Residence</h3>
+                            <p class="text-[11px] text-neutral-400 uppercase tracking-widest leading-loose">
+                                A study in traditional proportions meeting modern layout requirements. Quiet geometry meets raw materiality.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 pt-8">
+                        <div class="space-y-6">
+                            <div class="aspect-[4/3] w-full bg-neutral-900 overflow-hidden">
+                                <img src="https://i.pinimg.com/736x/59/ac/c5/59acc5b49f339f8617d8b01aa8921005.jpg" class="w-full h-full object-cover" alt="Contemporary African Villa">
+                            </div>
+                            <div class="flex justify-between items-start pt-2">
+                                <div>
+                                    <h3 class="text-sm tracking-widest uppercase font-medium">Contemporary African Villa</h3>
+                                    <p class="text-[10px] tracking-widest text-neutral-400 uppercase mt-1">Beige & Black Concept</p>
+                                </div>
+                                <span class="text-[10px] tracking-widest text-neutral-500 uppercase font-mono">02</span>
+                            </div>
+                            <p class="text-[11px] text-neutral-400 uppercase tracking-widest leading-loose max-w-md">
+                                Afrocentric luxury minimalist living room featuring noble materials like polished marble, waxed concrete, dark wood, and custom bamboo elements.
+                            </p>
+                        </div>
+
+                        <div class="space-y-6 lg:mt-16">
+                            <div class="aspect-[4/3] w-full bg-neutral-900 overflow-hidden">
+                                <img src="https://i.pinimg.com/736x/b3/7b/91/b37b913f675a920d4fbf4900a24b46d9.jpg" class="w-full h-full object-cover" alt="Open-Concept Villa">
+                            </div>
+                            <div class="flex justify-between items-start pt-2">
+                                <div>
+                                    <h3 class="text-sm tracking-widest uppercase font-medium">Open-Concept Minimalist Living</h3>
+                                    <p class="text-[10px] tracking-widest text-neutral-400 uppercase mt-1">Spatial Fluidity Layout</p>
+                                </div>
+                                <span class="text-[10px] tracking-widest text-neutral-500 uppercase font-mono">03</span>
+                            </div>
+                            <p class="text-[11px] text-neutral-400 uppercase tracking-widest leading-loose max-w-md">
+                                An expansive architectural system removing physical barriers to fuse natural exterior lighting conditions straight into internal living volumes.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center pt-8">
+                        <div class="lg:col-span-4 lg:pr-6 order-2 lg:order-1">
+                            <span class="text-[10px] tracking-[0.3em] uppercase text-neutral-500 block mb-3">Project 04 // Interior Focal Point</span>
+                            <h3 class="text-lg tracking-wider uppercase font-light mb-4">The Central Hearth Living Lounge</h3>
+                            <p class="text-[11px] text-neutral-400 uppercase tracking-widest leading-loose">
+                                Designed around structural symmetry. This living canvas highlights tailored bespoke furniture items framing a minimalist fireplace directly embedded into the accent boundary wall.
+                            </p>
+                        </div>
+                        <div class="lg:col-span-8 order-1 lg:order-2">
+                            <div class="aspect-[16/10] w-full bg-neutral-900 overflow-hidden">
+                                <img src="https://i.pinimg.com/736x/67/89/78/678978b62966b02e5eacc5388e2bb0fa.jpg" class="w-full h-full object-cover" alt="Fireplace Lounge">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 pt-8">
+                        <div class="lg:col-span-5 space-y-6">
+                            <div class="aspect-[3/4] w-full bg-neutral-900 overflow-hidden">
+                                <img src="https://i.pinimg.com/736x/d1/34/f4/d134f4caff7c2ec863872c496fe6cb81.jpg" class="w-full h-full object-cover" alt="Earth Materiality Archive">
+                            </div>
+                            <div>
+                                <h3 class="text-sm tracking-widest uppercase font-medium">Minimal Earth Materiality Archive</h3>
+                                <p class="text-[11px] text-neutral-400 uppercase tracking-widest leading-loose mt-2">
+                                    A close-up exploration highlighting raw textured tactile backdrops and organic surface interactions.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="lg:col-span-7 space-y-6 lg:pt-24">
+                            <div class="aspect-[16/10] w-full bg-neutral-900 overflow-hidden relative">
+                                <video 
+                                    class="jI_JN7 w-full h-full" 
+                                    data-test-id="duplo-hls-video" 
+                                    elementtiming="closeup-video-main-MainPinImage" 
+                                    playsinline="" 
+                                    autoplay
+                                    muted
+                                    loop
+                                    poster="https://i.pinimg.com/736x/8b/93/e7/8b93e745276d7709dc6d6824b7616671.jpg" 
+                                    preload="auto" 
+                                    src="blob:https://ca.pinterest.com/4fd64e84-9420-4872-af4a-648e4dd3fed7" 
+                                    style="object-fit: cover;">
+                                    <track kind="captions">
+                                </video>
+                            </div>
+                            <div>
+                                <h3 class="text-sm tracking-widest uppercase font-medium">Cinematic Spatial Atelier Study</h3>
+                                <p class="text-[11px] text-neutral-400 uppercase tracking-widest leading-loose mt-2">
+                                    A high-end modern cinematic layout documenting how shadows react to curated furniture placements throughout the daylight cycle.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="w-full bg-[#796048] text-white py-24">
+            <div class="max-w-[1400px] mx-auto px-8">
+                <span class="text-[10px] tracking-[0.3em] uppercase text-neutral-300 block mb-2">Placements & Perspectives</span>
+                <h2 class="text-lg tracking-[0.15em] uppercase font-light mb-16">Spatial Dialogue</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-12">
+                    <div class="flex flex-col justify-between border-l border-white/20 pl-6 h-full">
+                        <div>
+                            <p class="text-xs uppercase tracking-[0.18em] leading-loose text-neutral-100 italic mb-8">
+                                "The Dansoon table acts less like furniture and more like a quiet anchor within the space. The grain of the solid oak and the precision of the joinery bring a raw, calming tactility that completely changes the room's energy."
+                            </p>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="w-9 h-9 rounded-full overflow-hidden bg-neutral-800 border border-white/10 flex-shrink-0">
+                                <img src="https://m.en.eastern-edition.com/web/upload/epblossom/img/easternedition-atelier-mobile-1.jpg" class="w-full h-full object-cover grayscale contrast-125" alt="Min-jae Choi">
+                            </div>
+                            <div>
+                                <h4 class="text-[11px] tracking-widest uppercase font-medium text-white">Min-jae Choi</h4>
+                                <p class="text-[10px] tracking-widest text-neutral-300 uppercase mt-0.5">Architectural Digest, Project Lead</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col justify-between border-l border-white/20 pl-6 h-full">
+                        <div>
+                            <p class="text-xs uppercase tracking-[0.18em] leading-loose text-neutral-100 italic mb-8">
+                                "Finding premium minimalist furniture that respects historic proportions without feeling dated is incredibly rare. EDInteriors balances old-world restraint with a crisp modern finish flawlessly."
+                            </p>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="w-9 h-9 rounded-full overflow-hidden bg-neutral-800 border border-white/10 flex-shrink-0">
+                                <img src="https://m.en.eastern-edition.com/web/upload/share-image-2-021b16121860c787dfe8e9e73a9fab70.jpg" class="w-full h-full object-cover grayscale contrast-125" alt="Elena Rostova">
+                            </div>
+                            <div>
+                                <h4 class="text-[11px] tracking-widest uppercase font-medium text-white">Elena Rostova</h4>
+                                <p class="text-[10px] tracking-widest text-neutral-300 uppercase mt-0.5">Principal Architect, Studio Rostov</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col justify-between border-l border-white/20 pl-6 h-full">
+                        <div>
+                            <p class="text-xs uppercase tracking-[0.18em] leading-loose text-neutral-100 italic mb-8">
+                                "The texture and weight of the lounge pieces feel exceptionally grounding. Every design detail feels deliberate, understated, and built to outlive fleeting modern interior trends."
+                            </p>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="w-9 h-9 rounded-full overflow-hidden bg-neutral-800 border border-white/10 flex-shrink-0">
+                                <img src="https://m.en.eastern-edition.com/web/upload/epblossom/img/main-mobile-3.jpg" class="w-full h-full object-cover grayscale contrast-125" alt="Ji-hun Park">
+                            </div>
+                            <div>
+                                <h4 class="text-[11px] tracking-widest uppercase font-medium text-white">Ji-hun Park</h4>
+                                <p class="text-[10px] tracking-widest text-neutral-300 uppercase mt-0.5">Collector, UN Village Residences</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="max-w-[800px] mx-auto px-8 py-32 text-center bg-white">
+            <h2 class="logo text-3xl mb-12">Bridging the Past, to the Future</h2>
+            <p class="text-xs uppercase tracking-[0.2em] leading-loose text-gray-600 mb-16">Our furniture is more than an object; it is an exploration of intentional living. Crafted with premium solid oaks, natural textiles, and structural architectural integrity.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="border border-gray-100 p-12 hover:bg-black hover:text-white transition-all group">
+                    <h4 class="nav-link group-hover:text-white">Bespoke Inquiries</h4>
+                </div>
+                <div class="border border-gray-100 p-12 hover:bg-black hover:text-white transition-all group">
+                    <h4 class="nav-link group-hover:text-white">Material Library</h4>
+                </div>
+            </div>
+        </section>
+
+        <section class="w-full bg-[#1C1C1A] text-white py-32 px-8">
+            <div class="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+                
+                <div class="lg:col-span-5 max-w-md mx-auto lg:mx-0 w-full">
+                    <div class="aspect-[3/4] bg-neutral-800 border border-white/10 grayscale overflow-hidden">
+                        <img src="https://m.en.eastern-edition.com/web/upload/epblossom/img/easternedition-atelier-mobile-1.jpg" class="w-full h-full object-cover object-center mix-blend-luminosity" alt="Daesun Im, Creative Director & CEO">
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 flex flex-col justify-center">
+                    <span class="text-[10px] tracking-[0.4em] uppercase text-neutral-400 block mb-3">Leadership Perspective</span>
+                    <h2 class="text-2xl tracking-[0.1em] uppercase font-light mb-2">Daesun Im</h2>
+                    <p class="text-[10px] tracking-[0.25em] uppercase text-neutral-400 mb-10">Founder, Chief Executive Officer & Creative Director</p>
+                    
+                    <div class="max-w-2xl space-y-8">
+                        <p class="text-sm md:text-base font-light tracking-wide leading-relaxed text-neutral-200 italic">
+                            "Luxury is not about excess; it is an exercise in absolute restraint. By stripping away the unnecessary noise, we allow the true nature of heritage materials and clean architecture to speak for itself within modern living spaces."
+                        </p>
+                        
+                        <p class="text-[11px] text-neutral-400 uppercase tracking-widest leading-loose">
+                            Under Im's direction, EDInteriors has transitioned into an international design benchmark, orchestrating global interior installations and spatial transformations that quietly reframe how traditional organic philosophies can integrate seamlessly with contemporary global design architectures.
+                        </p>
+                        
+                        <div class="pt-6 border-t border-neutral-800 flex items-center space-x-8">
+                            <a href="/about" class="text-[10px] uppercase tracking-[0.2em] text-white border-b border-white pb-1 hover:text-neutral-400 hover:border-neutral-400 transition-colors">Read Our Full Story</a>
+                            <a href="/contact" class="text-[10px] uppercase tracking-[0.2em] text-neutral-400 hover:text-white transition-colors">Inquire for Private Consultation</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <footer class="site-footer">
+            <div class="footer-grid">
+                
+                <div class="footer-column">
+                    <h4 class="footer-col-title">Products</h4>
+                    <ul class="footer-list">
+                        <li><p>By Category</p></li>
+                        <li><a href="/lounge" class="footer-link">Lounge</a></li>
+                        <li><a href="/dining" class="footer-link">Dining</a></li>
+                        <li><a href="/office" class="footer-link">Office</a></li>
+                        <li><a href="/bedroom" class="footer-link">Bed Room</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4 class="footer-col-title">Client Service</h4>
+                    <ul class="footer-list">
+                        <li><a href="/faq" class="footer-link">FAQ</a></li>
+                        <li><a href="/contact" class="footer-link">Contact</a></li>
+                        <li><a href="/location" class="footer-link">Location</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4 class="footer-col-title">Legal Info</h4>
+                    <ul class="footer-list">
+                        <li><a href="/privacy" class="footer-link">Privacy Policy</a></li>
+                        <li><a href="/terms" class="footer-link">Terms of Use</a></li>
+                        <li><a href="/information" class="footer-link">Information Use</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4 class="footer-col-title">Newsletter</h4>
+                    <ul class="footer-list">
+                        <li><p>SUBSCRIBE TO OUR NEWSLETTER*</p></li>
+                        <li>
+                            <form action="#" method="POST">
+                                <input type="email" class="newsletter-input" placeholder="ENTER YOUR E-MAIL ADDRESS" required>
+                                <span class="newsletter-consent">Personal information collection and usage agreement.</span>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <div class="company-meta">
+                    COMPANY: EDInteriors Co., Ltd. &nbsp;|&nbsp; OWNER: Daesun Im &nbsp;|&nbsp; CPO: Hadley Hong<br>
+                    ADDRESS: 17, Eonju-ro 133-gil, Gangnam-gu, Seoul, KR &nbsp;|&nbsp; TEL: 070.8129.1111<br>
+                    BUSINESS LICENSE: 676-86-02435 &nbsp;|&nbsp; MAIL ORDER LICENSE: No. 2022-Seoul Gangnam-01540 &nbsp;|&nbsp; E-MAIL: contact@edinteriors.com
+                </div>
+                <div class="copyright">
+                    &copy; EDInteriors All rights reserved.
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const slides = document.querySelectorAll("#hero-slider .slide");
+        const digitCounter = document.getElementById("slide-digit-counter");
+        const prevBtn = document.getElementById("prev-slide-btn");
+        const nextBtn = document.getElementById("next-slide-btn");
+        
+        let currentSlide = 0;
+        let slideTimer;
+        const intervalDuration = 8000; // 8 seconds interval time duration 
+
+        function updateSlidePosition(nextIndex) {
+            // Fade Out Step
+            slides[currentSlide].classList.remove("opacity-100");
+            slides[currentSlide].classList.add("opacity-0");
+
+            currentSlide = nextIndex;
+
+            // Fade In Step
+            slides[currentSlide].classList.remove("opacity-0");
+            slides[currentSlide].classList.add("opacity-100");
+
+            // Text State Counter Mutation Layer (e.g., 2 / 5)
+            digitCounter.textContent = `${currentSlide + 1} / ${slides.length}`;
+        }
+
+        function triggerNext() {
+            const nextIndex = (currentSlide + 1) % slides.length;
+            updateSlidePosition(nextIndex);
+        }
+
+        function triggerPrev() {
+            const prevIndex = (currentSlide - 1 + slides.length) % slides.length;
+            updateSlidePosition(prevIndex);
+        }
+
+        // Loop Auto-Start Cycle
+        function startAutoCycle() {
+            clearInterval(slideTimer);
+            slideTimer = setInterval(triggerNext, intervalDuration);
+        }
+
+        // Action Click Control Receivers 
+        nextBtn.addEventListener("click", () => {
+            triggerNext();
+            startAutoCycle(); // Resets timer countdown cleanly on manual choice
+        });
+
+        prevBtn.addEventListener("click", () => {
+            triggerPrev();
+            startAutoCycle();
+        });
+
+        // Initialize Loop Start
+        startAutoCycle();
+    });
+    </script>
+</body>
+</html>
