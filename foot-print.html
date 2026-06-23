@@ -1,1 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Footprint | Minimalist Luxury</title>
+    <!-- External Dependencies -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .nav-link {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            transition: opacity 0.3s;
+        }
+        .nav-link:hover { opacity: 0.5; }
+    </style>
+</head> 
+<body class="antialiased bg-[#111111] text-white overflow-x-hidden">
 
+    <!-- NAVIGATION HEADER -->
+    <header class="fixed w-full top-0 left-0 z-[100] bg-[#111111]/80 backdrop-blur-md px-8 py-6 flex items-center justify-between border-b border-neutral-900">
+        <div class="flex items-center space-x-8">
+            <!-- Fixed ID added here for the trigger button -->
+            <button id="menu-open-btn" class="p-1 focus:outline-none hover:opacity-60 transition-opacity">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M4 8h16M4 16h16"></path>
+                </svg>
+            </button>
+            <nav class="hidden lg:flex space-x-10">
+                <a href="#" class="nav-link">Home</a>
+                <a href="#" class="nav-link">Projects</a>
+                <a href="#" class="nav-link">About</a>
+            </nav>
+        </div>
+        <div class="logo text-sm font-medium tracking-[0.2em] uppercase">Eastern Edition</div>
+        <div class="flex items-center space-x-6">
+            <a href="#" class="nav-link hidden md:block">EN/KR</a>
+            <button>
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- FULL-SCREEN MOBILE OVERLAY MENU DRAWER -->
+    <!-- pointer-events-none hides it initially; JS toggles opacity and translate transforms -->
+    <div id="mobile-menu" class="fixed inset-0 z-[200] bg-[#111111] translate-x-[-100%] opacity-0 pointer-events-none transition-all duration-500 ease-in-out flex flex-col justify-between p-8">
+        <div>
+            <!-- Header area inside the open drawer -->
+            <div class="flex justify-between items-center pb-8 border-b border-neutral-900">
+                <div class="logo text-sm font-medium tracking-[0.2em] uppercase">Eastern Edition</div>
+                <button id="menu-close-btn" class="p-1 focus:outline-none hover:opacity-60 transition-opacity">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Mobile Menu Navigation Links -->
+            <nav class="flex flex-col space-y-8 mt-16 pl-4">
+                <a href="#" class="text-xl tracking-[0.2em] uppercase font-light hover:text-neutral-400 transition-colors">Products</a>
+                <a href="#" class="text-xl tracking-[0.2em] uppercase font-light hover:text-neutral-400 transition-colors">Projects</a>
+                <a href="#" class="text-xl tracking-[0.2em] uppercase font-light hover:text-neutral-400 transition-colors">About</a>
+                <a href="#" class="text-xl tracking-[0.2em] uppercase font-light hover:text-neutral-400 transition-colors">Bespoke</a>
+            </nav>
+        </div>
+
+        <!-- Mobile Menu Footer Area -->
+        <div class="pt-8 border-t border-neutral-900 flex justify-between items-center">
+            <a href="#" class="nav-link">EN/KR</a>
+            <span class="text-[9px] tracking-widest text-neutral-500 uppercase">© 2026 Studio Archive</span>
+        </div>
+    </div>
+
+    <!-- MAIN PAGE CONTENT CONTAINER -->
+    <main class="pt-[76px]">
+
+        <!-- HERO INTRODUCTION -->
+        <section class="max-w-[1400px] mx-auto px-8 pt-32 pb-20">
+            <div class="max-w-3xl border-b border-neutral-800 pb-12">
+                <span class="text-[10px] tracking-[0.3em] uppercase text-neutral-500 block mb-3">Global Expansion</span>
+                <h1 class="text-2xl md:text-4xl tracking-[0.15em] uppercase font-light leading-snug mb-6">
+                    Spatial Narratives<br>Across Borders
+                </h1>
+                <p class="text-[11px] text-neutral-400 uppercase tracking-widest leading-loose">
+                    A chronological retrospective of our international interior decor installations. From private residential estates to diplomatic architectural spaces, our design footprint bridges regional heritage with modern minimalism.
+                </p>
+            </div>
+        </section>
+
+        <!-- GLOBAL COVERAGE TEXT CHRONOLOGY -->
+        <section class="max-w-[1400px] mx-auto px-8 pb-16">
+            <div class="space-y-24">
+
+                <!-- 01 // Madrid, Spain -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start pt-8 border-t border-neutral-900">
+                    <div class="lg:col-span-3 flex items-baseline space-x-4">
+                        <span class="text-[11px] font-mono tracking-widest text-neutral-500">01 // 2010</span>
+                        <span class="text-[9px] tracking-[0.2em] uppercase bg-neutral-900 border border-neutral-800 px-3 py-0.5 text-neutral-400">Residential Archive</span>
+                    </div>
+                    <div class="lg:col-span-4">
+                        <h2 class="text-lg tracking-wider uppercase font-light">Madrid, Spain</h2>
+                    </div>
+                    <div class="lg:col-span-5">
+                        <p class="text-[11px] text-neutral-400 uppercase tracking-widest leading-loose mb-6">
+                            Our premier European architectural intervention. This interior project focused on harmonizing raw masonry with low-slung, custom-tailored oak features to capture natural Iberian daylight patterns.
+                        </p>
+                        <div class="grid grid-cols-2 gap-4 pt-4 border-t border-neutral-900">
+                            <div>
+                                <span class="text-[9px] tracking-[0.2em] text-neutral-500 uppercase block">Material focus</span>
+                                <span class="text-[10px] tracking-widest uppercase font-light text-neutral-300">Stoned Travertine, Smoked Oak</span>
+                            </div>
+                            <div>
+                                <span class="text-[9px] tracking-[0.2em] text-neutral-500 uppercase block">Spatial Concept</span>
+                                <span class="text-[10px] tracking-widest uppercase font-light text-neutral-300">Symmetric Restraint</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 02 // Mexico -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start pt-8 border-t border-neutral-900">
+                    <div class="lg:col-span-3 flex items-baseline space-x-4">
+                        <span class="text-[11px] font-mono tracking-widest text-neutral-500">02 // 2015</span>
+                        <span class="text-[9px] tracking-[0.2em] uppercase bg-neutral-900 border border-neutral-800 px-3 py-0.5 text-neutral-400">Coastal Villa</span>
+                    </div>
+                    <div class="lg:col-span-4">
+                        <h2 class="text-lg tracking-wider uppercase font-light">Mexico</h2>
+                    </div>
+                    <div class="lg:col-span-5">
+                        <p class="text-[11px] text-neutral-400 uppercase tracking-widest leading-loose mb-6">
+                            An exploration into earth materiality. The design balances raw, heavily textured walls with smooth dark-stained elements to establish a deeply peaceful, grounding architectural landscape.
+                        </p>
+                        <div class="grid grid-cols-2 gap-4 pt-4 border-t border-neutral-900">
+                            <div>
+                                <span class="text-[9px] tracking-[0.2em] text-neutral-500 uppercase block">Material focus</span>
+                                <span class="text-[10px] tracking-widest uppercase font-light text-neutral-300">Waxed Concrete, Dark Bamboo</span>
+                            </div>
+                            <div>
+                                <span class="text-[9px] tracking-[0.2em] text-neutral-500 uppercase block">Spatial Concept</span>
+                                <span class="text-[10px] tracking-widest uppercase font-light text-neutral-300">Organic Fluidity</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 03 // Milan, Italy -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start pt-8 border-t border-neutral-900">
+                    <div class="lg:col-span-3 flex items-baseline space-x-4">
+                        <span class="text-[11px] font-mono tracking-widest text-neutral-500">03 // 2018</span>
+                        <span class="text-[9px] tracking-[0.2em] uppercase bg-neutral-900 border border-neutral-800 px-3 py-0.5 text-neutral-400">Atelier Studio</span>
+                    </div>
+                    <div class="lg:col-span-4">
+                        <h2 class="text-lg tracking-wider uppercase font-light">Milan, Italy</h2>
+                    </div>
+                    <div class="lg:col-span-5">
+                        <p class="text-[11px] text-neutral-400 uppercase tracking-widest leading-loose mb-6">
+                            Executed during the international design exposition. This historical apartment layout was stripped back to isolate negative space, showcasing custom furniture profiles against architectural white canvases.
+                        </p>
+                        <div class="grid grid-cols-2 gap-4 pt-4 border-t border-neutral-900">
+                            <div>
+                                <span class="text-[9px] tracking-[0.2em] text-neutral-500 uppercase block">Material focus</span>
+                                <span class="text-[10px] tracking-widest uppercase font-light text-neutral-300">Carrara Marble, Matte Lacquer</span>
+                            </div>
+                            <div>
+                                <span class="text-[9px] tracking-[0.2em] text-neutral-500 uppercase block">Spatial Concept</span>
+                                <span class="text-[10px] tracking-widest uppercase font-light text-neutral-300">Negative Volume</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 04 // Dubai -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start pt-8 border-t border-neutral-900">
+                    <div class="lg:col-span-3 flex items-baseline space-x-4">
+                        <span class="text-[11px] font-mono tracking-widest text-neutral-500">04 // 2022</span>
+                        <span class="text-[9px] tracking-[0.2em] uppercase bg-neutral-900 border border-neutral-800 px-3 py-0.5 text-neutral-400">Penthouse Suite</span>
+                    </div>
+                    <div class="lg:col-span-4">
+                        <h2 class="text-lg tracking-wider uppercase font-light">Dubai, UAE</h2>
+                    </div>
+                    <div class="lg:col-span-5">
+                        <p class="text-[11px] text-neutral-400 uppercase tracking-widest leading-loose mb-6">
+                            A high-altitude layout designed around structural symmetry and panoramic views. Tailored bespoke furniture structures frame minimalist hearth zones built directly into primary limestone boundaries.
+                        </p>
+                        <div class="grid grid-cols-2 gap-4 pt-4 border-t border-neutral-900">
+                            <div>
+                                <span class="text-[9px] tracking-[0.2em] text-neutral-500 uppercase block">Material focus</span>
+                                <span class="text-[10px] tracking-widest uppercase font-light text-neutral-300">Limestone, Brushed Bronze</span>
+                            </div>
+                            <div>
+                                <span class="text-[9px] tracking-[0.2em] text-neutral-500 uppercase block">Spatial Concept</span>
+                                <span class="text-[10px] tracking-widest uppercase font-light text-neutral-300">Monolithic Scale</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FUTURE IN PROGRESS MARKER -->
+                <div class="pt-16 border-t border-neutral-900">
+                    <span class="text-[10px] tracking-[0.4em] uppercase text-neutral-500 block mb-2">In Progress</span>
+                    <h3 class="text-sm tracking-widest uppercase font-light text-neutral-300">Upcoming Horizons & More</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- BOTTOM ARCHIVAL MEDIA GALLERY -->
+        <section class="max-w-[1400px] mx-auto px-8 pt-24 pb-32 border-t border-neutral-900">
+            <div class="mb-16">
+                <span class="text-[10px] tracking-[0.3em] uppercase text-neutral-500 block mb-2">Visual Index</span>
+                <h3 class="text-lg tracking-widest uppercase font-light">Project Gallery Studies</h3>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 items-end">
+                <div class="space-y-4">
+                    <div class="aspect-[9/16] w-full bg-neutral-900 overflow-hidden">
+                        <img src="https://i.pinimg.com/1200x/33/36/7e/33367e97b6734af0e3544ebf555f989e.jpg" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" alt="Study 01">
+                    </div>
+                    <span class="text-[10px] font-mono text-neutral-500 tracking-wider uppercase block">Fig. 01 // Spatial Depth</span>
+                </div>
+
+                <div class="space-y-4 lg:mb-16">
+                    <div class="aspect-[9/16] w-full bg-neutral-900 overflow-hidden">
+                        <img src="https://i.pinimg.com/736x/59/ac/c5/59acc5b49f339f8617d8b01aa8921005.jpg" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" alt="Study 02">
+                    </div>
+                    <span class="text-[10px] font-mono text-neutral-500 tracking-wider uppercase block">Fig. 02 // Earth Tone Study</span>
+                </div>
+
+                <div class="space-y-4">
+                    <div class="aspect-[3/4] w-full bg-neutral-900 overflow-hidden">
+                        <img src="https://i.pinimg.com/736x/d1/34/f4/d134f4caff7c2ec863872c496fe6cb81.jpg" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" alt="Study 03">
+                    </div>
+                    <span class="text-[10px] font-mono text-neutral-500 tracking-wider uppercase block">Fig. 03 // Raw Materiality</span>
+                </div>
+
+                <div class="space-y-4 lg:mb-24">
+                    <div class="aspect-[9/16] w-full bg-neutral-900 overflow-hidden">
+                        <img src="https://i.pinimg.com/736x/b3/7b/91/b37b913f675a920d4fbf4900a24b46d9.jpg" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" alt="Study 04">
+                    </div>
+                    <span class="text-[10px] font-mono text-neutral-500 tracking-wider uppercase block">Fig. 04 // Geometry</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- LIGHTWEIGHT JAVASCRIPT FOR INTERACTIVE DRAWER CONTROLS -->
+    <script>
+        const menuOpenBtn = document.getElementById('menu-open-btn');
+        const menuCloseBtn = document.getElementById('menu-close-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        // Function to open overlay drawer smoothly
+        menuOpenBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('translate-x-[-100%]', 'opacity-0', 'pointer-events-none');
+            mobileMenu.classList.add('translate-x-0', 'opacity-100', 'pointer-events-auto');
+            document.body.classList.add('overflow-hidden'); // Prevents background body scrolling
+        });
+
+        // Function to hide overlay drawer smoothly
+        menuCloseBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('translate-x-0', 'opacity-100', 'pointer-events-auto');
+            mobileMenu.classList.add('translate-x-[-100%]', 'opacity-0', 'pointer-events-none');
+            document.body.classList.remove('overflow-hidden'); // Re-enables background scrolling
+        });
+    </script>
+</body>
+</html>
+                                
